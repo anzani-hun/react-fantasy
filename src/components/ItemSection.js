@@ -6,14 +6,14 @@ const ItemSection = () => {
     const [items, setItems] = useState([])
 
     useEffect(()=>{
-        fetch('http://127.0.0.1:8000/api/items/')
+        fetch('api/items/')
         .then(res => res.json())
         .then(data => setItems(data))
     }, [])
 
   return (
     <section className='item-section'>
-        { items.map( item => <ItemCard {... item} />) } 
+        { items.map( (item, idx) => <ItemCard key={idx} {... item} />) } 
     </section>
   )
 }
