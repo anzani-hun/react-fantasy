@@ -1,8 +1,11 @@
 import React from 'react'
+import ItemSection from './components/ItemSection'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+      <ItemSection/>
+    </div>
   )
 }
 
